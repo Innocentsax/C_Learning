@@ -4,19 +4,20 @@
 struct node
 {
     int age;
-    struct node *link
-}
+    struct node *link;
+};
 int main(void)
 {
     /* Declare the Head */
     struct node *head;
+    head = (struct node *) malloc(sizeof(struct node));
     /* Declare a node */
-    struct node *nodeA, nodeB, nodeC;
+    struct node *nodeA, *nodeB, *nodeC;
 
     /* Allocate memory for the node using malloc */
-    nodeA = (struct node *) malloc(sizeof(struct node))
-    nodeB = (struct node *) malloc(sizeof(struct node))
-    nodeC = (struct node *) malloc(sizeof(struct node))
+    nodeA = (struct node *) malloc(sizeof(struct node));
+    nodeB = (struct node *) malloc(sizeof(struct node));
+    nodeC = (struct node *) malloc(sizeof(struct node));
     /* Assign value to the node */
     nodeA->age = 27;
     nodeB->age = 24;
@@ -30,15 +31,11 @@ int main(void)
     /* Create a head */
     head = nodeA;
 
-    /* Create a temporal pointer */
-    temp = head;
-
     /* Traversing the linkes list and printing each member */
-    while (temp->next != NULL)
+    while (head->link != NULL)
     {
-        printf("%d -->", temp->age);
-        temp = temp->next;
+	head = head->link;
+        printf("%d -->", head->age);
     }
-    printf("%d -->\n", temp->age);
-
+ 	printf("%d\n", head->age); 
 }
