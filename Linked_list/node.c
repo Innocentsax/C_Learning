@@ -1,11 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "Struct.h"
+/**
 struct node
 {
     int age;
     struct node *link;
-};
+};*/
+
+void printlist(struct node *head)
+{
+	struct node *temp = head;
+	while (temp->link != NULL)
+	{
+		printf("%d -->", temp->age);
+		temp = temp->link;
+	}
+	printf("%d -->", temp->age);
+	printf("\n");
+}
 int main(void)
 {
     /* Declare the Head */
@@ -31,11 +44,15 @@ int main(void)
     /* Create a head */
     head = nodeA;
 
+    /* Inserting new node at the beginning */
+    insert_begin(&head, 70);
+
     /* Traversing the linkes list and printing each member */
-    while (head->link != NULL)
+    /**while (head->link != NULL)
     {
 	head = head->link;
         printf("%d -->", head->age);
     }
- 	printf("%d\n", head->age); 
+ 	printf("%d\n", head->age);*/
+   printlist(head); 
 }
