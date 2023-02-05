@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	//Declare a file pointer variable
+	FILE *fp;
+	//Open the file using fopen()
+	fp = fopen("Filename", "w");
+	//Process the file using the suitable function
+	fprintf(fp, "%s", "HELLO WORLD");
+	//Close the file using fclose() function
+	fclose(fp);
+
+	return 0;
+}
