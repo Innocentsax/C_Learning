@@ -9,7 +9,7 @@ int top = -1; // top = -1 indicates that the stack is empty
 
 void push(int data)
 {
-	if(top == MAX - 1)
+	if(top == MAX -1)// if isFull() return 0, then it indicates the stack is not full. hence, the code after if construct will be evaluated
 	{
 		printf("Stack overflow");
 		return;//indicate the end of the function
