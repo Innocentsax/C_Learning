@@ -107,3 +107,32 @@ int main(){
   
   return 0;
 }
+
+//Beginning
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+/* Unsorted or linear Search using Intergers
+
+int main()
+{
+  int arr[] = {4, 2, 5, 9, 6, 13};
+
+  for (int i = 0; i<5; i++){
+    if (arr[i] == 0){
+      printf("Found\n");
+    }
+  }
+  printf("Not found\n");
+}*/
+
+int main()
+{
+  char names[] = {"Innocent"};
+  for (int i = 0; i<3; i++){
+    if (strcmp(&names[i], "George")){
+      printf("Found\n");
+    }
+  }
+  printf("Not found\n");
+}
